@@ -1,0 +1,75 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  h1 {
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+  }
+  li {
+    list-style: none;
+  }
+  .task-input-container {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .task-input-container input {
+    margin-top: 3px;
+    margin-right: 14px;
+    width: 300px;
+    font-size: 17px;
+    padding: 10px;
+    border: lightpink solid 1px;
+    border-radius: 10px;
+    outline: none;
+  }
+  .task-input-container input:focus {
+    border-width: 3px;
+  }
+  .task-input-container button {
+    font-size: 17px;
+    padding: 10px;
+    border: none;
+    background-color: lightpink;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .list-container {
+    width: 60%;
+    min-height: 50vh;
+    margin: 40px auto;
+    line-height: 1.5;
+    border: solid grey 1px;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .list {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    justify-content: center;
+  }
+  .list li {
+    font-size: 20px;
+    display: flex;
+    padding: 5px 10px;
+    border-radius: 3px;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+  }
+  .list li:hover {
+    background-color: lightpink;
+  }
+  
+  .empty-text {
+    font-size: 30px;
+    color: grey;
+    text-align: center;
+  }
+  
