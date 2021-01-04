@@ -25,6 +25,13 @@ const addTask = () => {
   let node = document.createTextNode(inputValue);
   newLI.appendChild(node);
   list.appendChild(newLI);
+  newLI.addEventListener('click', () => {
+    setInterval(() => {
+      list.removeChild(newLI);
+      isEmpty();
+    }, 600);
+    newLI.style.textDecoration = 'line-through';
+  });
   isEmpty();
   inputField.value = '';
 };
@@ -35,18 +42,4 @@ document.addEventListener('keypress', (event) => {
   if (event.key === 'Enter') {
     addTask();
   }
-});
-document.addEventListener('click', (event) => {
-  if (
-    event.target.nodeName === 'LI' ||
-    event.target.parentNode.nodeName === 'LI'
-  ) {
-    setInterval(() => {
-      event.target.remove();
-    }, 600);
-    event.target.style.textDecoration = 'line-through';
-  } else {
-    console.log('You clicked something else');
-  }
-  isEmpty();
 });
